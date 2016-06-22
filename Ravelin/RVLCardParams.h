@@ -12,11 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RVLCardParams : NSObject
 
-- (id)toJSONObjectWithError:(NSError **)error;
-
 @property (nonatomic) NSString *number;
 @property (nonatomic) NSUInteger expiryMonth;
 @property (nonatomic) NSUInteger expiryYear;
+
+- (id)toJSONObjectWithError:(NSError **)error;
 
 @end
 
