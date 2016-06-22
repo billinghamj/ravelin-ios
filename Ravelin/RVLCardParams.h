@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic) NSUInteger expiryMonth;
 @property (nonatomic) NSUInteger expiryYear;
 
+- (BOOL)setExpiryYearCoerced:(NSUInteger)expiryYear;
 - (id)toJSONObjectWithError:(NSError **)error;
 
 @end

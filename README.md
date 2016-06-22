@@ -19,7 +19,7 @@ pod 'Ravelin', '~> 0.1.0'
 RVLCardParams *cardParams = [RVLCardParams new];
 cardParams.number = @"4242424242424242";
 cardParams.expiryMonth = 12;
-cardParams.expiryYear = 2020;
+cardParams.expiryYear = 2020; // or cardParams.expiryYearCoerced = 20;
 
 [[RVLAPIClient sharedClient] createTokenForCard:cardParams completion:^(RVLCardToken *cardToken, NSError *error) {
 	if (error) {

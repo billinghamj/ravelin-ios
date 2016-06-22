@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 	s.name = 'Ravelin'
-	s.version = '0.1.0'
+	s.version = '0.1.1'
 	s.summary = 'Client-side Obj-C library for the Ravelin API. Ravelin is a fraud detection tool.'
 	s.homepage = 'https://github.com/billinghamj/ravelin-ios'
 

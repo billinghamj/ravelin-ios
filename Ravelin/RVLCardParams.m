@@ -13,6 +13,19 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation RVLCardParams
 
+- (BOOL)setExpiryYearCoerced:(NSUInteger)expiryYear
+{
+  if (expiryYear < 100)
+    expiryYear += 2000;
+
+  if (expiryYear < 2016 || expiryYear > 2100)
+    return NO;
+
+  _expiryYear = expiryYear;
+
+  return YES;
+}
+
 - (id)toJSONObjectWithError:(NSError **)error
 {
 	if (!_number || ![self stringIsValidLuhn:_number])
